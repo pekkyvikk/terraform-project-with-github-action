@@ -6,16 +6,19 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "terraform-remote-backend-s3-save"
+    bucket = "terraform-remote-backend-s3-save5936"
     key    = "dev/terraform.tfstate"
-    region = "ap-south-1"
+    region = "us-east-1"
+    dynamodb_table = "terraform-state-lock"
+    encrypt = true
+
   }
 }
 
 
 provider "aws" {
   # Configuration options
-  region = "ap-south-1"
+  region = "us-east-1"
 }
 
 
