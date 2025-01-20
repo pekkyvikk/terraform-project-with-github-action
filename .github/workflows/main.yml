@@ -25,7 +25,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-        working-directory: ./Terraform-VPC
+        working-directory: .Desktop/projects/terraform-project-with-github-action
       - name: Terraform Validate
         id: validate
         run: terraform validate
